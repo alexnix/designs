@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="http://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <style media="screen">
+    h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    line-height: 51px;
+    font-size: 46px;
+    text-transform: uppercase;
+    margin: 0 0 23px 0;
+    }
+h2 {
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+p {
+    font-family: 'Droid Serif', serif;
+    font-size: 15px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+        body, html {
+        height: 100%;
+      }
+
+      body {
+        background-image: url('article_2_bg.jpg');
+      }
+
+      div.top {
+        height: 80%;
+        padding: 50px;
+      }
+      div.bottom {
+        min-height: 20%;
+      }
+
+      .img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-image: url("article_2_img.jpg");
+      }
+
+      .left, .right {
+        min-height: 100%;
+        padding: 0 50px;
+      }
+      button {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: gold;
+        border: 0px;
+        text-transform: uppercase;
+        padding: 10px 20px 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="top">
+    <div class="img"></div>
+  </div>
+  <div class="bottom">
+    <div class="col-sm-6 left">
+      <h1>Lorem Ipsum</h1>
+      <h2>Excepteur sint occaecat cupidatat non proident sunt in culpa.</h2>
+
+    </div>
+    <div class="col-sm-6 right">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <button class="pull-right">Read More</button>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+
+      //$('html, body').animate({scrollTop: $(".bottom").offset().top}, 1000);
+
+      $("button").click(function(){
+        $("button").hide();
+        var i = 0;
+        while (i++<10) {
+          $(".right").append("<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>");
+        }
+        $('html, body').animate({
+            scrollTop: $(".bottom").offset().top - 50
+        }, 1000, function(){
+        
+        });
+      });
+    })
+  </script>
+  </body>
+</html>
